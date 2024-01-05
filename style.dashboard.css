@@ -1,0 +1,218 @@
+
+.dashboard-container {
+  position: relative;
+}
+
+.header-container {
+  background: var(--clr-primary);
+  color: white;
+  padding: 32px 24px 24px 24px;
+  max-width: 95vw;
+  margin: 2.5vw auto;
+  border-radius: 10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  position: relative;
+
+  & .logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & img {
+      width: 30px;
+      height: 30px;
+      /* border-radius: 50%; */
+      /* filter: invert(97%) sepia(97%) saturate(0%) hue-rotate(31deg) brightness(102%) contrast(105%); */
+    }
+
+    & p {
+      font-weight: 600;
+      margin-left: .5rem;
+      font-size: 12px;
+    }
+  }
+
+  & .menu-btn {
+
+    & i {
+      font-size: 24px;
+    }
+  }
+
+  & .menu-content {
+    position: absolute;
+    top: 2rem;
+    right: -15rem;
+    background: #fff;
+    padding: 24px; 
+    box-shadow: 0 2px 30px rgba(0, 0, 0, .2);
+    transition: 300ms;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    & ul {
+      list-style: none;
+    }
+
+    & li {
+      padding-bottom: 8px;
+      color: var(--clr-primary);
+
+      & i {
+        margin-right: 4px;
+      }
+    }
+
+    /* & .logout {
+      margin-top: 1rem;
+    } */
+  }
+}
+
+
+.name-container {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    & p {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    & #user {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    & .name-value {
+      margin-top: 8px;
+    }
+
+    & #credit {
+      font-size: 18px;
+    }
+}
+
+.balance-container {
+
+
+  & .cash-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 8px;
+
+    & i {
+      font-size: 24px;
+    }
+  }
+
+  & p {
+    font-size: 12px;
+  }
+}
+
+.amount-due-container {
+
+  background: rgba(255, 255, 255, 0.5);
+  padding: 48px 24px 24px;
+
+  & .amount-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    & .amount {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    & .due-date {
+      font-size: 14px;
+    }
+  }
+
+  & .amount-details {
+    display: flex;
+    gap: 5rem;
+  } 
+}
+
+.amount-details {
+
+  & p {
+    padding-top: .5rem;
+    font-size: 14px;
+  }
+
+  & .total-amount {
+    font-weight: 600;
+  }
+}
+
+.addstyle {
+  font-weight: 600;
+}
+
+/* Pay with Container */
+
+.pay-with-container {
+  padding-inline: 24px;
+
+  & .pay-wrapper {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  & h1 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  & .merchant {
+    color: #030303;
+    text-decoration: none;
+  }
+
+  & .gc-popup {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--clr-gcash);
+    padding: 12px 8px;
+    border-radius: 5px;
+    font-size: 12px; 
+  }
+}
+
+/* Warning */
+
+.warning {
+  position: fixed;
+  max-width: 100vw;
+  width: 100vw;
+  padding: 12px 24px 12px;
+  bottom: 0;
+  left: 0;
+  background: var(--clr-primary);
+
+  & p {
+    color: white;
+    font-size: 12px;
+  }
+}
+
+
+
+

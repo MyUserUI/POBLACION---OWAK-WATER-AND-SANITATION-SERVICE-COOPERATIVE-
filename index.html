@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Poblacion - Owak Water and Sanitation Service Cooperative</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.dashboard.css">
+  <link rel="icon" href="Main-Logo.png">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<main>
+
+  <div class="app-container">
+
+    <div class="fp-wrapper">
+      <div class="fp-loader">
+        <span style="display: none" id="fp-countdown">2</span>
+      </div>
+
+        <div class="forgot-password-container">
+          <div class="fp-content">
+            <h2>Forgot password</h2>
+            <p>Enter your mobile number for verification process, we will send 4 digits code to your number.</p>
+          </div>
+
+          <div class="fp-input-number">
+              <label for="input-number-fp">Mobile Number:</label>
+              <input type="number" id="input-number-fp" required>
+            
+              <button type="submit" class="continue-btn">Continue</button>
+              <button class="cancel-btn">Cancel</button>
+          </div>
+      </div>
+
+      <!-- Digit Code -->
+      <div class="digit-code-container">
+        <div class="code-content">
+          <h2>Enter 4 Digit Code</h2>
+          <p>Enter the 4 digit code that you received on your mobile number.</p>
+        </div>
+
+        <div class="fp-input-code">
+              <div class="input-code-holder">
+                <input type="text" id="input-number1" maxlength="1"  required>
+                <input type="text" id="input-number2" maxlength="1"  required>
+                <input type="text" id="input-number3" maxlength="1"  required>
+                <input type="text" id="input-number4" maxlength="1"  required>
+              </div>
+            <button type="submit" class="continue-btn2">Continue</button>
+        </div>
+      </div>
+
+      <!-- Reset Pass Container -->
+        <div class="reset-pass-container">
+          <div class="fp-content">
+            <h2>Reset Password</h2>
+            <p>Set the new password for your account so you can login and access all the features</p>
+          </div>
+
+          <div class="fp-input-number">
+            <div>
+              <label for="input-number-fp">Password:</label>
+              <input type="password" id="input-number-fp" required>
+            </div>
+
+            <div class="confirm-pass">
+              <label for="input-number-fp">Confirm Password:</label>
+              <input type="password" id="input-number-fp" required>
+            </div>
+        
+            <button type="submit" class="continue-btn3">Reset Password</button>
+          </div>
+        </div>
+     
+    </div>
+
+    <div class="log-screen-container">
+      <div class="logo-wrapper">
+        <img src="Main-Logo.png" alt="Common Water Logo">
+        <p class="sub-title">Login to Poblacion - Owak Water and Sanitation Service Cooperative</p>
+        <p class="sub">We're happy to see you again!</p>
+      </div>
+
+      <div class="form-container">
+        <form method="get" id="login-form" action="">
+          <!-- Login Number & Pass -->
+              <div>
+                <label for="user_name" class="label">Full Name:</label>
+                  <div>
+                    <i class="fa-solid fa-user log-icon"></i>
+                    <input type="text" name="mobile_number" id="user_name" class="login-input input-name" required placeholder="ex. Micheal Angelo">
+                  </div>
+              </div>
+
+              <div>
+                <label for="password-input" class="label">Password</label>
+
+                <div>
+                  <i class="fa-solid fa-lock log-icon"></i>
+                  <input type="password" name="password" id="password-input" class="login-input input-pass"  required>
+                  <i class="bi bi-eye-slash" id="eye"></i>  
+                </div>
+              </div>
+
+          <!-- Check Box -->
+              <div class="checkbox-container">
+                <div>
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <label for="checkbox" >Remember me</label>
+                </div>
+                <div class="forget-pass-container">
+                  <a href="#" id="forgot-pass">Forgot Password?</a>
+                </div>
+              </div>
+
+          <!-- Login Button -->
+              <div class="login-container">
+                <button type="submit" class="login-btn">Login</button>
+              </div>
+
+          <!-- Sign Up Page  -->
+              <div class="signup-container">
+                <p>Don't have an account? <span><a href="signup.html">Sign up</a></span></p>
+              </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Dashboard -->
+  <div class="dashboard-container">
+    <!-- Loading Screen -->
+    <div class="loading-screen-container">
+      <div class="loading-screen">
+        <div class="logo-main">
+          <img src="Main-Logo.png" alt="Common Water Logo">
+        </div>
+        <!-- <h1>Welcome!</h1>
+          <h1>To Common water</h1> -->
+          <span style="display: none" id="countdown2">2</span>
+      </div>
+    </div>
+<!-- End Loading Screen -->
+
+    <div class="header-container">
+      <!-- Navigation -->
+      <div class="navigation">
+        <div class="logo-block">
+          <img src="Main-Logo.png" alt="Common Water Logo">
+          <p>POBLACION - OWAK WATER AND SANITATION SERVICE COOPERATIVE</p>
+        </div>
+        <div class="menu-btn" style="cursor: pointer">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-content">
+          <ul>
+            <!-- <li><i class="fa-solid fa-user"></i> Profile</li>
+            <li><i class="fa-solid fa-circle-info"></i> Account Info</li> -->
+            <li class="logout" onclick="location.href='index.html'">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Name Section -->
+      <div class="name-container">
+        <div class="user-name-wrapper">
+          <p>Name:</p>
+          <p id="user" class="name-value"></p>
+        </div>
+
+        <div class="credit-points-wrapper">
+          <p>Credit Points:</p>
+          <p id="credit" class="name-value">0.00</p>
+        </div>
+      </div>
+
+      <!-- Amount Balance -->
+      <div class="balance-container">
+        <p>Total Cash:</p>
+          <div class="cash-container">
+            <i class="fa-solid fa-peso-sign"></i>
+            <h1 class="cash-value">0.00</h1>
+            <!-- <i class="fa-solid fa-circle-plus"></i> -->
+          </div>
+      </div>
+    </div>
+
+<!-- Payment Section -->
+      <div class="amount-due-container">
+
+        <div class="amount-header-wrapper">
+          <p class="amount">Your Bill Amount</p>
+          <div class="due-date">Due date: <span id="month">01</span>/<span id="days">21</span>/<span id="year">2024</span
+            ></div>
+        </div>
+
+        <div class="amount-details">
+          <div>
+            <p>Common Water Bill</p>  
+            <p>VAT</p>
+            <p>Subtotal</p>
+            <p>Convenience Fee</p>
+            <p class="total-amount">Total Amount</p>            
+          </div>
+
+          <div id="value-holder">
+            <div class="cwb"></div>
+            <div class="vat"></div>
+            <div class="subtotal"></div>
+            <div class="cf"></div>
+            <div class="total-due"></div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Pay with Section -->
+      <div class="pay-with-container">
+        <div class="pay-wrapper">
+          <h1>Pay with:</h1>
+            <div>
+              <a href="#" class="merchant">Pawassco | </a>
+              <a href="#" class="gc-popup"> Gcash</a>
+            </div>
+        </div>
+      </div>
+  </div>
+
+<!-- Gcash Payment -->
+    <div class="gcash-container">
+      <div class="payment-loader"><span style="display: none" id="countdown3">2</span></div>
+
+      <div class="arrow-heading">
+        <i class="fa-solid fa-arrow-left" id="backarrow"></i>
+      </div>
+        <div class="gcash-section">
+          <div class="gcash-heading">
+            <h2>Gcash</h2>
+          </div>
+      
+            <div class="paymentbox">
+              <div class="boxheader">
+                <div class="boxcontent contentbox1">
+                  <p>Merchant</p>
+                  <p>Amount Due</p>
+                </div>
+                <div class="boxcontent">
+                  <p>Pawassco</p>
+                  <p id="due-amount"></p>
+                </div>
+              </div>
+
+              <div class="ltp">
+                <p class="ltp-heading">Login to pay with Gcash</p>
+                <p class="ltp-text">Input your Mobile number</p>
+              </div>
+
+              <!-- Mobile Number Input -->
+              <div class="mobile-number-container">
+                <p class="mobile-heading">Mobile Number</p>
+                <input type="number" maxlength="10" id="number-user">
+                <div class="sidenumber">
+                  <p>+63</p>
+                </div>
+              </div>
+
+              <!-- Next Button -->
+              <div class="next-btn-container">
+                <button class="next-btn" id="next-btn" type="submit">NEXT</button>
+              </div>
+              <div class="create-account">
+                <a href="#">Create an Account</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<!-- GCash Authentication -->
+<div class="authentication-container">
+
+  <div class="authentication-loader"><span style="display: none;" id="auth-countdown">2</span></div>
+
+  <div class="arrow-heading" id="hideback">
+    <i class="fa-solid fa-arrow-left" id="backarrow backArrow2"></i>
+  </div>
+
+  <div class="gcash-section"> 
+      <div class="gcash-heading">
+        <h2>Gcash</h2>
+      </div>
+  </div>
+
+<!-- Authentication Section -->
+  <div class="paymentbox">
+    <div class="boxheader">
+      <div class="boxcontent contentbox1">
+        <img src="auth-icon.png" alt="authentication icon">
+      </div>
+      <div class="boxcontent">
+        <div>
+          <p>We sent an authentication code to your number <span class="user-number"></span></p>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="ltp">
+      <p class="ltp-heading" id="code-message">We just sent you a code. Please wait for 5 minutes to request for a new one.</p>
+      <p class="ltp-text">Enter Authentication Code</p>
+    </div>
+
+       <!-- Mobile Number Input -->
+    <div class="mobile-number-container">
+      <input type="number" max="5" oninput="limitNumberLength(this, 6)" id="limitedNumber" required>
+
+      <div class="dash-container">
+        <div class="dashed dash1"></div>
+        <div class="dashed dash2"></div>
+        <div class="dashed dash3"></div>
+        <div class="dashed dash4"></div>
+        <div class="dashed dash5"></div>
+        <div class="dashed dash6"></div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+      <div class="next-btn-container">
+        <button class="next-btn" type="submit" id="submit-btn">SUBMIT CODE</button>
+      </div>
+      <div class="create-account">
+          <p>Need new code?</p>
+          <a href="#" id="resend-btn"><span id="resend-code">Resend now</span></a>
+          <span id="countdown-min">300</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Last steps -->
+<div class="ls-container">
+  <div class="ls-loader"><span id="ls-countdown" style="display: none">3</span></div>
+  <div class="arrow-heading" id="ls-back-arrow">
+    <i class="fa-solid fa-arrow-left" ></i>
+  </div>
+    <div class="gcash-section">
+      <div class="gcash-heading">
+        <h2>Gcash</h2>
+      </div>
+  
+        <div class="paymentbox">
+          <div class="boxheader">
+            <div class="boxcontent contentbox1">
+              <p>Merchant</p>
+              <p>Amount Due</p>
+            </div>
+            <div class="boxcontent">
+              <p>Pawassco</p>
+              <p id="amount-due"></p>
+            </div>
+          </div>
+
+          <div class="ltp">
+            <p class="ltp-heading">Login to pay with Gcash</p>
+            <p class="ltp-text">Enter your 4-digit MPIN</p>
+          </div>
+
+          <!-- Mobile Number Input -->
+          <div class="mobile-number-container">
+            <input type="password" max="5" oninput="limitNumberLength(this, 4)" id="limitedNumber" required placeholder="••••">
+          </div>
+
+          <!-- Next Button -->
+          <div class="next-btn-container">
+            <button class="next-btn" type="submit" id="next-btn-2">NEXT</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Success Screen Confirmation -->
+<div class="sucess-screen-container">
+  <div class="color-second">
+    <div class="check-wrapper">
+      <i class="fa-solid fa-check"></i>
+    </div>
+  </div>
+
+  <div class="success-content">
+    <p>Online Payment Linking Successful!</p>
+  </div>
+
+  <div class="success-text">
+    <p>You will recieve a text message confirming the <br>successful linking of your account with this merchant</p>
+  </div>
+
+  <div class="redirecting-container">
+    <div class="success-loader-wrapper">
+      <p>Redirecting to the merchant page in</p>
+      <div class="success-loader"><span id="countdown">10</span></div>
+    </div>
+    <button class="redirecting-btn">OKAY</button>
+  </div>
+</div>
+
+
+<!-- Paid Successul Screen -->
+<div class="paid-container">
+  <div class="paid-loader"><span id="paid_countdown">3</span></div>
+
+  <div class="paid-wrapper">
+    <div class="success-wrapper">
+      <div class="checked"><i class="fa-solid fa-check"></i></div>
+      <h1>Bill Payment Successful</h1>
+      <p class="merchant-name">Merchant: Pawassco</p>
+    </div>
+
+    <div class="paid-amount-wrapper">
+      <p class="total-amount-paid">Amount paid: <span class="paid-amount"></span></p>
+      <p class="p-gcash">Paid via Gcash</p>
+    </div>
+
+      <button class="close-btn">Close</button>
+  </div>
+</div>
+
+
+
+
+</body>
+</html> 
